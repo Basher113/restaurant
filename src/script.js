@@ -1,19 +1,26 @@
 import "./styles.css";
 
-import HomeModule from "./home";
+import HomePage from "./home";
+import MenuPage from "./menu"
 
 function ContentController() {
     const tabsList = document.querySelectorAll(".tab");
     const contentDiv = document.querySelector("#content")
-    const home = HomeModule();
+    const homePage = HomePage();
+    const menuPage = MenuPage();
 
-    const renderPage = () => {
-        contentDiv.appendChild(home);
+    const renderPage = (content=homePage) => {
+        contentDiv.textContent = "";
+        contentDiv.appendChild(content);
     }
 
     tabsList.forEach(tab => {
         tab.addEventListener("click", () => {
-            console.log(tab.textContent)
+            if (tab.textContent === "Menu") {
+                renderPage(menuPage)
+            } else if (tab.textContent === "Home") {
+                renderPage()
+            }
         })
     })
     renderPage()

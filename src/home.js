@@ -1,7 +1,7 @@
 import "./styles.css";
 import imagePath from "./assets/pexels-kristina-nikolskaya-396769113-31150174.jpg";
 
-function HomeModule() {
+function HomePage() {
     const homeDiv = document.createElement("div");
     const homeTextDiv = document.createElement("div");
     const homeH2Text = document.createElement("h2");
@@ -34,5 +34,5 @@ function HomeModule() {
 }
 
 
-export default HomeModule
+export default HomePage;
         
