@@ -58,6 +58,20 @@ h1, h2, h3, h4, h5, h6 {
 :root {
     --background-color: rgb(10, 10, 10);
     --primary-color: rgb(255, 205, 41);
+
+    --font-xl: 3.5rem;
+    --font-large: 2rem;
+    --font-medium: 1.4rem;
+    --font-normal: 1rem;
+}
+
+@media (max-width: 43.75em) {
+  :root {
+    --font-xl: 2.8rem;
+    --font-large: 1.8rem;
+    --font-medium: 1rem;
+    --font-normal: 0.5rem;
+  }
 }
 
 li {
@@ -97,18 +111,17 @@ header nav {
   padding: 1em 2em;
 }
 
-
-
 .logo {
     cursor: pointer;
-    font-size: 2rem;
+    font-size: var(--font-large);
     color: var(--primary-color);
+    white-space: nowrap;
 }
 
 .tabs {
     display: flex;
     gap: 3em;
-    font-size: 1.1rem;
+    font-size: var(--font-medium);
 }
 
 .tab {
@@ -141,7 +154,7 @@ header nav {
 }
 
 .home h2 {
-    font-size: 3.5rem;
+    font-size: var(--font-large);
 }
 
 .home .description {
@@ -151,7 +164,7 @@ header nav {
     justify-content: center;
 
     h3 {
-        font-size: 2rem;
+        font-size: var(--font-large);
     }
     
     p {
@@ -177,7 +190,7 @@ header nav {
 }
 
 .menu h3 {
-  font-size: 2rem;
+  font-size: var(--font-large);
 }
 
 .menu-cards {
@@ -198,10 +211,15 @@ header nav {
   object-position: center;
 }
 
+.menu-card h4 {
+  font-size: var(--font-medium);
+}
+
 .menu-card .menu-card-text {
   padding: 1em;
   background-color: white;
   color: black;
+  font-size: var(--font-normal);
 }
 
 /* Contact styles Start */
@@ -211,6 +229,7 @@ header nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
+  align-items: start;
 }
 
 .contact-text,
@@ -223,12 +242,11 @@ header nav {
   display: grid;
   justify-content: end;
   gap: 2em;
-  font-size: 1.5rem;
-  border: none;
+  font-size: var(--font-medium);
 }
 
 .contact-text h2 {
-  font-size: 2.8rem;
+  font-size: var(--font-xl);
 }
 
 .contact-info div {
@@ -238,7 +256,8 @@ header nav {
 }
 
 .contact-text .text-info {
-  max-inline-size: 60ch;
+  
+  font-size: var(--font-medium);
 }
 
 .contact-form form {
@@ -277,6 +296,8 @@ label {
 textarea {
   padding-bottom: 2em;
 }
+
+
 
 
 

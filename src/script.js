@@ -1,7 +1,8 @@
 import "./styles.css";
 
 import HomePage from "./home";
-import MenuPage from "./menu"
+import MenuPage from "./menu";
+import ContactPage from "./contact"
 
 function ContentController() {
     const tabsList = document.querySelectorAll(".tab");
@@ -21,6 +22,9 @@ function ContentController() {
                 renderPage(menuPage)
             } else if (tab.textContent === "Home") {
                 renderPage()
+            } else {
+                const contactPage = ContactPage();
+                renderPage(contactPage)
             }
         })
     })
