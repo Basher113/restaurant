@@ -64,6 +64,12 @@ li {
     list-style-type: none;
 }
 
+svg {
+  max-height: 26px;
+  max-width: 26px;
+  fill: white;
+}
+
 body {
     background-color: var(--background-color);
     color: white;
@@ -112,9 +118,9 @@ header nav {
 #content {
   width: 100vw;
   height: 100vh;
+  
+
 }
-
-
 
 .home,
 .menu {
@@ -123,6 +129,7 @@ header nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .home .text {
@@ -164,10 +171,9 @@ header nav {
 
 
 .menu {
+  padding: 5em 4em 0 4em;
   justify-content: start;
   gap: 2em;
-  padding: 0 4em;
-  padding-top: 5em;
 }
 
 .menu h3 {
@@ -197,5 +203,81 @@ header nav {
   background-color: white;
   color: black;
 }
+
+/* Contact styles Start */
+
+.contact {
+  padding: 5em 4em 0 4em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.contact-text,
+.contact-form {
+  border: 1px solid rgb(233, 233, 233);
+  padding: 2em;
+}
+
+.contact-text {
+  display: grid;
+  justify-content: end;
+  gap: 2em;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.contact-text h2 {
+  font-size: 2.8rem;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.contact-text .text-info {
+  max-inline-size: 60ch;
+}
+
+.contact-form form {
+  display: grid;
+  gap: 1em;
+  padding: 0.5em;
+}
+
+.contact-form form input,
+textarea {
+  width: 100%;
+  padding: 0.3em;
+}
+
+.name-inputs {
+  display: flex;
+  gap: 2em;
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  font-weight: 700;
+  width: 50%;
+  padding: 0.8em 0;
+  
+  border: none;
+  border-radius: 6px;
+  
+  cursor: pointer;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  padding-bottom: 2em;
+}
+
+
 
 

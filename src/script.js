@@ -7,7 +7,7 @@ function ContentController() {
     const tabsList = document.querySelectorAll(".tab");
     const contentDiv = document.querySelector("#content")
     const homePage = HomePage();
-    const menuPage = MenuPage();
+    
 
     const renderPage = (content=homePage) => {
         contentDiv.textContent = "";
@@ -17,6 +17,7 @@ function ContentController() {
     tabsList.forEach(tab => {
         tab.addEventListener("click", () => {
             if (tab.textContent === "Menu") {
+                const menuPage = MenuPage();
                 renderPage(menuPage)
             } else if (tab.textContent === "Home") {
                 renderPage()
