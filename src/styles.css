@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
     --background-color: rgb(10, 10, 10);
     --primary-color: rgb(255, 205, 41);
+    --border-color: rgb(197, 197, 197);
 
     --font-xl: 3.5rem;
     --font-large: 2rem;
@@ -126,13 +127,18 @@ header nav {
 
 .tab {
     cursor: pointer;
+    padding: 0.2em;
+    
+}
+
+.tabs .active {
+  background-color: var(--primary-color);
+  color: black;
 }
 
 #content {
   width: 100vw;
   height: 100vh;
-  
-
 }
 
 .home,
@@ -201,7 +207,7 @@ header nav {
 }
 
 .menu-card {
-  border: 1px solid rgb(197, 197, 197);
+  border: 1px solid var(--border-color);
 }
 
 .menu-card img {
@@ -225,7 +231,7 @@ header nav {
 /* Contact styles Start */
 
 .contact {
-  padding: 5em 4em 0 4em;
+  padding: 10em 4em 0 4em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2em;
@@ -234,7 +240,7 @@ header nav {
 
 .contact-text,
 .contact-form {
-  border: 1px solid rgb(233, 233, 233);
+  border: 1px solid var(--border-color);
   padding: 2em;
 }
 
