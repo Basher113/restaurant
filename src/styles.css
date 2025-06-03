@@ -160,7 +160,7 @@ header nav {
 }
 
 .home h2 {
-    font-size: var(--font-large);
+    font-size: var(--font-xl);
 }
 
 .home .description {
